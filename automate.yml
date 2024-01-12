@@ -1,0 +1,28 @@
+---
+crosscompute: 0.9.4
+name: Tip Calculator
+description: Simplify tip calculations
+version: 0.0.1
+
+input:
+  variables:
+    - id: bill_amount
+      view: number
+      path: variables.dictionary
+    - id: tip_percentage
+      view: number
+      path: variables.dicitonary
+output:
+  variables:
+    - id: tip_amount
+      view: number
+      path: variables.dictionary
+    - id: total_bill
+      view: number
+      path: variables.dictionary
+presets:
+    folder: presets/ten
+    folder: presets/fifteen
+    folder: presets/twenty
+scripts:
+  - path: run.ipynb
